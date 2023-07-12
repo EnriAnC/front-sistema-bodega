@@ -86,7 +86,7 @@ main{
 }
 
 .navbar{
-    background-color: var(--color1-azul) !important;
+    background-color: red;
 }
 
 .navbar a{
