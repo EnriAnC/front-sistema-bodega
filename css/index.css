@@ -1,0 +1,77 @@
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
+h1{
+    color: red;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,td{
+    word-break: keep-all;
+    padding: .25rem .45rem;
+    border: 1px solid rgba(0, 0, 0, 0.268);
+}
+
+.grid-center{
+    display: grid;
+    place-items: center;
+}
+
+.box1{
+    background-color:rgb(77, 50, 35);
+    font-family: Calibri;
+    font-size: 15px;
+    color: white;
+    width:370px;
+    height: 480px;
+    text-align: justify;
+    padding-right: 60px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border: 10px ridge rgb(213, 220, 191);
+    margin: 40px;
+}
+
+.box2{
+    background-color:rgb(52, 53, 54);
+    font-family: Calibri;
+    font-size: 15px;
+    color: white;
+    width:370px;
+    height: 370px;
+    text-align: justify;
+    padding-right: 60px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border: 15px ridge rgb(221, 231, 189);
+    margin: 40px;
+    position: relative;
+}
+
+
+.registro{
+    width: 400px;
+    background-color: aliceblue;
+    padding: 15px;
+}
+
+#form_login{
+    padding: 15px;
+}
+
+main{
+    padding-top: 56px;
+    height: 100%;
+}
