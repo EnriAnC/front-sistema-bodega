@@ -10,7 +10,6 @@ Sigue estos pasos para configurar el proyecto en tu entorno local.
 
 Asegúrate de tener instalado lo siguiente:
 
-- Visual Code Studio (Extensión: Live Server)
 - Git
 
 ### Pasos de Clonación y Push al Repositorio como contribuidor
