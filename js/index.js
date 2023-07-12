@@ -12,13 +12,13 @@ async function loginSubmit(event){
       const rol = res.data[0].rol
       localStorage.setItem('rol', rol)
       if(rol === 'jefebodega'){
-        location.href = './jefebodega.html'
+        location.href = './pages/jefebodega.html'
       }
       if(rol === 'bodeguero'){
-        location.href = './bodeguero.html'
+        location.href = './pages/bodeguero.html'
       }
       if(rol === 'administrador'){
-        location.href = './administrador.html'
+        location.href = './pages/administrador.html'
       }
     }
 }
