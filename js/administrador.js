@@ -1,4 +1,4 @@
-import api from './my_api.js'
+import api from './utils/my_api.js'
 
 
 async function registrarUsuarioSubmit(event){

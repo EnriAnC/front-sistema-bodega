@@ -1,4 +1,4 @@
-import api from './my_api.js'
+import api from './utils/my_api.js'
 
 const formLogin = document.getElementById('form-login')
 formLogin.addEventListener('submit', loginSubmit)
