@@ -1,3 +1,12 @@
+:root{
+    --color1-azul: #0D47A1;
+    --color2-amarillo: #FFC107;
+    --color3-verde: #388E3C;
+    --color4-rosa: #F06292;
+    --color5-gris: #424242;
+    --color6-naranja: #FF5722;
+}
+
 html{
     height: 100%;
 }
@@ -77,9 +86,46 @@ main{
 }
 
 .navbar{
-    background-color: #002D72 !important;
+    background-color: var(--color1-azul) !important;
 }
 
 .navbar a{
     color: white;
+}
+
+.acciones>h2{
+    padding-bottom: .5rem;
+}
+
+.acciones{
+    padding: 3vh 2.5vw;
+    background-color: var(--color6-naranja);
+    color: rgb(255, 255, 255)
+}
+
+.acciones li::marker{
+    content: none;
+}
+
+.acciones ul{
+    display: flex;
+    gap: 10px;
+}
+
+.acciones a{
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.acciones a:hover{
+    padding: 5px 10px;
+    background-color: var(--color2-amarillo);
+    color: black;
+    border: 1px solid white;
+}
+
+.acciones a{
+    /* text-decoration: none; */
+    color: rgb(226, 226, 226);
 }
