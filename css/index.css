@@ -75,3 +75,11 @@ main{
     padding-top: 56px;
     height: 100%;
 }
+
+.navbar{
+    background-color: #002D72 !important;
+}
+
+.navbar a{
+    color: white;
+}
