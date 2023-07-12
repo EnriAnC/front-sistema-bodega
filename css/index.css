@@ -16,7 +16,7 @@ body{
 }
 
 h1{
-    color: red;
+    color: rgb(0, 89, 255);
 }
 
 table{
@@ -72,7 +72,7 @@ th,td{
 
 .registro{
     width: 400px;
-    background-color: aliceblue;
+    background-color: rgb(238, 124, 139);
     padding: 15px;
 }
 
