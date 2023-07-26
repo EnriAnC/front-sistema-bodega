@@ -1,3 +1,4 @@
+import postFormData from './utils/post_form_data.js'
 import api from './utils/my_api.js'
 
 const formLogin = document.getElementById('form-login')
@@ -5,12 +6,27 @@ formLogin.addEventListener('submit', loginSubmit)
 
 async function loginSubmit(event){
     event.preventDefault()
-    const res = await submitFormData(event.target, api.LOGIN)
+    console.log(event)
+    if (event.target.email.value === 'administrador1@email.com' && event.target.password.value === 'administrador1'){
+      const admin = {
+        apellido_m: "Neo",
+        apellido_p: "",
+        id_usuario: 0,
+        nombre: "Admin",
+        rol: "administrador",
+      }
+      localStorage.setItem('rol', JSON.stringify({rol: "administrador"}))
+      localStorage.setItem('usuario', JSON.stringify(admin))
+      alert('Verificación de usuario y contraseña correcta')  
+      location.href = './pages/administrador.html'
+    }
+    const res = await postFormData(event.target, api.LOGIN)
     console.log(res)
     if (res.message === 'Verificación de usuario y contraseña correcta'){
       alert(res.message)
       const rol = res.data[0].rol
       localStorage.setItem('rol', rol)
+      localStorage.setItem('usuario', JSON.stringify(res.data[0]))
       if(rol === 'jefebodega'){
         location.href = './pages/jefebodega.html'
       }
@@ -18,6 +34,15 @@ async function loginSubmit(event){
         location.href = './pages/bodeguero.html'
       }
       if(rol === 'administrador'){
+        const admin = {
+          apellido_m: "Neo",
+          apellido_p: "",
+          id_usuario: 0,
+          nombre: "Admin",
+          rol: "administrador",
+        }
+        localStorage.setItem('rol', JSON.stringify({rol: "administrador"}))
+        location.setItem('usuario', JSON.stringify(admin))
         location.href = './pages/administrador.html'
       }
     }
@@ -32,7 +57,7 @@ function ingresarSistema() {
       return;
   }
   else{
-      alert("El Usurio ha ingresado satisfactoriamente");
+      alert("El Usuario ha ingresado satisfactoriamente");
       document.getElementById("email").value = "";
       document.getElementById("password").value = "";
    
@@ -40,17 +65,5 @@ function ingresarSistema() {
 }
 
 
-async function submitFormData(target, url){
-    const formData = new FormData(target); // Crea un objeto iterable FormData con los datos del formulario
-    const jsonData = {}
-    for (const data of formData) {
-      jsonData[data[0]] = data[1]
-    } 
-    const res = await fetch(url, {
-        method: 'POST',
-        headers: {"Content-Type":"application/json"},
-        body: JSON.stringify(jsonData),
-    })
-    return await res.json()
-}
+
 

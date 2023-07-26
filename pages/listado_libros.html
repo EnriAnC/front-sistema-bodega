@@ -11,7 +11,16 @@
 <body>
     <nav class="navbar fixed-top navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">JEFE DE BODEGAS</a>
+            <a class="navbar-brand" href="/pages/jefebodega.html">JEFE DE BODEGAS</a>
+            <p id="datos_usuario"></p>
+            <button class="btn border" onclick="cerrarSesion()">Cerrar sesión</button>
+            <script>
+                function cerrarSesion(){
+                    localStorage.removeItem('rol')
+                    localStorage.removeItem('usuario')
+                    location.href = '/index.html'
+                }
+            </script>
         </div>
     </nav>
     <main class="container">

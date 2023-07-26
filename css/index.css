@@ -7,6 +7,10 @@
     --color6-naranja: #FF5722;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 html{
     height: 100%;
 }
@@ -32,6 +36,7 @@ th,td{
 }
 
 .grid-center{
+    height: 100%;
     display: grid;
     place-items: center;
 }
@@ -74,15 +79,30 @@ th,td{
     width: 400px;
     background-color: rgb(238, 124, 139);
     padding: 15px;
+    box-shadow: 0px 4px 8px;
+    border-radius: 5px;
 }
+
+.registro_movimiento{
+    width: clamp(230px, 260px, 350px);
+    background-color: rgb(124, 238, 132);
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.512);
+    border-radius: 5px;
+}
+
 
 #form_login{
     padding: 15px;
 }
 
 main{
-    padding-top: 56px;
-    height: 100%;
+    position: relative;
+    top: 56px;
+    height: calc(100% - 56px);
+    width: 100%;
+    /* display: grid;
+    place-items: center; */
 }
 
 .navbar{
@@ -108,24 +128,34 @@ main{
 }
 
 .acciones ul{
+    padding: 0;
     display: flex;
     gap: 10px;
 }
 
-.acciones a{
+.acciones li {
     padding: 5px 10px;
     border: 1px solid;
     border-radius: 5px;
 }
 
-.acciones a:hover{
+.acciones li:hover {
     padding: 5px 10px;
     background-color: var(--color2-amarillo);
-    color: black;
     border: 1px solid white;
+    color: black;
 }
 
+
 .acciones a{
-    /* text-decoration: none; */
+    text-decoration: none;
     color: rgb(226, 226, 226);
+}
+
+#datos_usuario{
+    color: white;
+}
+
+.btn{
+    color: white;
 }

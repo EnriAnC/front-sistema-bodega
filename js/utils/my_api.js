@@ -1,14 +1,18 @@
 const NAME = 'sistema-bodegas-inventario.onrender.com',
-    DOMAIN = `https://${NAME}`,
+    // DOMAIN = `https://${NAME}`,
+    DOMAIN = `http://localhost:8000`,
     SITE = `${DOMAIN}`,
     API = `${SITE}`,
 
     BODEGAS = `${API}/bodegas`,
 
     USUARIOS = `${API}/usuarios`,
+    USUARIOSBODEGUEROS = `${API}/usuarios/bodegueros`,
 
     LIBROS = `${API}/libros`,
     LIBROSBYBODEGA = `${API}/libros/bodega`,
+
+    CATEGORIAS = `${API}/categorias`,
 
     EDITORIALES = `${API}/editoriales`,
 
@@ -25,7 +29,9 @@ export default {
     LIBROS,
     LIBROSBYBODEGA,
     EDITORIALES,
+    CATEGORIAS,
     MOVIMIENTOS,
     LOGIN,
-    REGISTER 
+    REGISTER,
+    USUARIOSBODEGUEROS 
 }

@@ -13,6 +13,10 @@ async function main() {
 
 document.addEventListener('change', inputSelectBodegaHandler)
 
+document.addEventListener('DOMContentLoaded', ()=>{
+    cargarUsuarioLS()
+})
+
 
     
 async function inputSelectBodegaHandler (ev) {
@@ -44,3 +48,8 @@ function cargarOptionsBodega(bodegasData){
 }
 
 
+function cargarUsuarioLS(){
+    const usuario = JSON.parse(localStorage.getItem('usuario'))
+    const $p = document.getElementById('datos_usuario')
+    $p.textContent = `${usuario.nombre} ${usuario.apellido_p} --- ${usuario.rol} `
+}
