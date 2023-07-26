@@ -2,6 +2,8 @@
 
 FrontEnd con HTML, CSS y JS para el proyecto de Inventario de Bodegas
 
+Preview: https://sys-bodega-nera.netlify.app/
+
 ## Instalación
 
 Sigue estos pasos para configurar el proyecto en tu entorno local.
