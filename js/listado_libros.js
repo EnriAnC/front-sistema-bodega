@@ -26,7 +26,7 @@ async function inputSelectBodegaHandler (ev) {
 async function updateTableByIdBodega(id_bodega){
     const table = Table()
     table.addColumns('Nombre', 'Autor', 'Stock')
-    table.addClass('table', ['clase1'])
+    table.addClass('table', ['clase1', 'table-bordered'])
 
     if (id_bodega === 'none') return table.insertBeforeElementById('selectBodega')
     const libros = await ajax(`${api.LIBROSBYBODEGA}/${id_bodega}`)

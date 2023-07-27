@@ -8,6 +8,7 @@ async function registrarUsuarioSubmit(event){
     const res = await postFormData(event.target, api.REGISTER)
     console.log(res)
     alert(res.message)
+    location.reload()
 }
 
 

@@ -41,9 +41,8 @@ function cargarUsuarioLS(){
 async function handleSubmitFormIngresarLibro(ev){
     ev.preventDefault()
     const data = await postFormData(ev.target, `${my_api.LIBROS}/bodega`)
-    alert(`
-    Libro: ${data[0].nombre_libro}
-    Autor: ${data[0].autor}`)
+    alert(`Libro ingresado!`)
+    location.reload()
 }
 
 async function cargarCategorias(){

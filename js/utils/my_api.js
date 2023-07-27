@@ -1,6 +1,6 @@
 const NAME = 'sistema-bodegas-inventario.onrender.com',
-    DOMAIN = `https://${NAME}`,
-    // DOMAIN = `http://localhost:8000`,
+    // DOMAIN = `https://${NAME}`,
+    DOMAIN = `http://localhost:8000`,
     SITE = `${DOMAIN}`,
     API = `${SITE}`,
 
